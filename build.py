@@ -36,15 +36,15 @@ classifiers = [
     'Programming Language :: Python :: 3',
 ]
 
-description = """
-Uses docstr-coverage to check documentation coverage of your project.
+description = """Uses docstr-coverage to check documentation coverage of your project.
 
 You can configure the docstr-coverage package using the following properties:
-- docstr_coverage_fail_under: The minimum coverage percentage that must be achieved. 
-    If the coverage is below this value, the build will fail. This will take
-    precedence over the value set in the configuration file.
-- docstr_coverage_config: The path to the configuration file for docstr-coverage.
-    Default: .docstr.yaml
+
+- `docstr_coverage_fail_under`: The minimum coverage percentage that must be achieved. 
+  If the coverage is below this value, the build will fail. This will take
+  precedence over the value set in the configuration file.
+- `docstr_coverage_config`: The path to the configuration file for docstr-coverage.
+  Default: .docstr.yaml
 """
 
 @init
