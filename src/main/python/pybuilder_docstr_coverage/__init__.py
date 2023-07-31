@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from pybuilder.core import depends, init, task
+from pybuilder.core import dependents, init, task
 from pybuilder.errors import BuildFailedException
 
 
@@ -9,7 +9,7 @@ def init_docstr_coverage_plugin(project):
     project.plugin_depends_on("docstr-coverage", "~=2.3.0")
 
 @task("docstr_coverage", "Checks coverage of docstrings")
-@depends("prepare")
+@dependents("analyze")
 def docstr_coverage(project, logger):
     # get location of source files
     src_dir = project.expand_path(project.get_property("dir_source_main_python"))
